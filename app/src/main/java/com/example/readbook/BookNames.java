@@ -12,9 +12,9 @@ import com.github.barteksc.pdfviewer.PDFView;
 
 public class BookNames extends AppCompatActivity implements View.OnClickListener {
 
-    CardView book1, book2, book3, book4;
+    CardView book1, book2, book3, book4, book5;
     PDFView pdfView;
-    Intent intent1, intent2, intent3, intent4;
+    Intent intent1, intent2, intent3, intent4, intent5;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +30,7 @@ public class BookNames extends AppCompatActivity implements View.OnClickListener
         book2.setOnClickListener(this);
         book3.setOnClickListener(this);
         book4.setOnClickListener(this);
+        book5.setOnClickListener(this);
 
     }
 
@@ -39,6 +40,7 @@ public class BookNames extends AppCompatActivity implements View.OnClickListener
         book2 = findViewById(R.id.book2);
         book3 = findViewById(R.id.book3);
         book4 = findViewById(R.id.book4);
+        book5 = findViewById(R.id.book5);
 
         pdfView = findViewById(R.id.pdfViewer);
     }
@@ -68,6 +70,13 @@ public class BookNames extends AppCompatActivity implements View.OnClickListener
                 intent4= new Intent(BookNames.this, Book.class);
                 intent4.putExtra("name","4");
                 startActivity(intent4);
+                break;
+
+
+            case R.id.book5:
+                intent5= new Intent(BookNames.this, Book.class);
+                intent5.putExtra("name","5");
+                startActivity(intent5);
                 break;
 
                 }
